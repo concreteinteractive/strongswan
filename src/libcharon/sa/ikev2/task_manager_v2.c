@@ -818,7 +818,7 @@ static status_t build_response(private_task_manager_t *this, message_t *request)
 	task_t *task;
 	message_t *message;
 	host_t *me, *other;
-	bool delete = FALSE, hook = FALSE;
+	bool delete = FALSE, hook = FALSE, clear = FALSE;
 	ike_sa_id_t *id = NULL;
 	uint64_t responder_spi = 0;
 	bool result;
@@ -889,6 +889,9 @@ static status_t build_response(private_task_manager_t *this, message_t *request)
 	/* message complete, send it */
 	clear_packets(this->responding.packets);
 	result = generate_message(this, message, &this->responding.packets);
+	/* we don't want to resend messages to sync MIDs if requests with the
+	 * previous MID arrive */
+	clear = message->get_message_id(message) == 0;
 	message->destroy(message);
 	if (id)
 	{
@@ -908,6 +911,10 @@ static status_t build_response(private_task_manager_t *this, message_t *request)
 			charon->bus->ike_updown(charon->bus, this->ike_sa, FALSE);
 		}
 		return DESTROY_ME;
+	}
+	else if (clear)
+	{
+		clear_packets(this->responding.packets);
 	}
 
 	array_compress(this->passive_tasks);
