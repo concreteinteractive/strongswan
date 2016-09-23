@@ -38,10 +38,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import org.strongswan.android.R;
-import org.strongswan.android.logic.VpnStateService;
-import org.strongswan.android.logic.VpnStateService.VpnStateListener;
-import org.strongswan.android.logic.imc.ImcState;
-import org.strongswan.android.logic.imc.RemediationInstruction;
+import org.strongswan.android.strongswanlib.logic.VpnStateService;
+import org.strongswan.android.strongswanlib.logic.VpnStateService.VpnStateListener;
+import org.strongswan.android.strongswanlib.logic.imc.ImcState;
+import org.strongswan.android.strongswanlib.logic.imc.RemediationInstruction;
 
 import java.util.ArrayList;
 

@@ -22,8 +22,8 @@ import java.util.Comparator;
 import java.util.List;
 
 import org.strongswan.android.R;
-import org.strongswan.android.data.VpnProfile;
-import org.strongswan.android.data.VpnType.VpnTypeFeature;
+import org.strongswan.android.strongswanlib.data.VpnProfile;
+import org.strongswan.android.strongswanlib.data.VpnType.VpnTypeFeature;
 
 import android.content.Context;
 import android.view.LayoutInflater;

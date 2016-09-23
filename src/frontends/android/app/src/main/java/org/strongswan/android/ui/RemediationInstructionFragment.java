@@ -25,7 +25,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import org.strongswan.android.R;
-import org.strongswan.android.logic.imc.RemediationInstruction;
+import org.strongswan.android.strongswanlib.logic.imc.RemediationInstruction;
 
 public class RemediationInstructionFragment extends ListFragment
 {

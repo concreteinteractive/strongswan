@@ -44,13 +44,13 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import org.strongswan.android.R;
-import org.strongswan.android.data.VpnProfile;
-import org.strongswan.android.data.VpnProfileDataSource;
-import org.strongswan.android.data.VpnType.VpnTypeFeature;
-import org.strongswan.android.logic.CharonVpnService;
-import org.strongswan.android.logic.TrustedCertificateManager;
-import org.strongswan.android.logic.VpnStateService;
-import org.strongswan.android.logic.VpnStateService.State;
+import org.strongswan.android.strongswanlib.data.VpnProfile;
+import org.strongswan.android.strongswanlib.data.VpnProfileDataSource;
+import org.strongswan.android.strongswanlib.data.VpnType.VpnTypeFeature;
+import org.strongswan.android.strongswanlib.logic.CharonVpnService;
+import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager;
+import org.strongswan.android.strongswanlib.logic.VpnStateService;
+import org.strongswan.android.strongswanlib.logic.VpnStateService.State;
 import org.strongswan.android.ui.VpnProfileListFragment.OnVpnProfileSelectedListener;
 
 public class MainActivity extends AppCompatActivity implements OnVpnProfileSelectedListener

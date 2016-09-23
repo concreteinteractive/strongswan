@@ -20,7 +20,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import org.strongswan.android.R;
-import org.strongswan.android.data.VpnProfile;
+import org.strongswan.android.strongswanlib.data.VpnProfile;
 import org.strongswan.android.ui.VpnProfileListFragment.OnVpnProfileSelectedListener;
 
 public class VpnProfileSelectActivity extends AppCompatActivity implements OnVpnProfileSelectedListener

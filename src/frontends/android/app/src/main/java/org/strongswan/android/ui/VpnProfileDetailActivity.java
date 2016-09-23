@@ -55,12 +55,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import org.strongswan.android.R;
-import org.strongswan.android.data.VpnProfile;
-import org.strongswan.android.data.VpnProfileDataSource;
-import org.strongswan.android.data.VpnType;
-import org.strongswan.android.data.VpnType.VpnTypeFeature;
-import org.strongswan.android.logic.TrustedCertificateManager;
-import org.strongswan.android.security.TrustedCertificateEntry;
+import org.strongswan.android.strongswanlib.data.VpnProfile;
+import org.strongswan.android.strongswanlib.data.VpnProfileDataSource;
+import org.strongswan.android.strongswanlib.data.VpnType;
+import org.strongswan.android.strongswanlib.data.VpnType.VpnTypeFeature;
+import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager;
+import security.TrustedCertificateEntry;
 import org.strongswan.android.ui.adapter.CertificateIdentitiesAdapter;
 import org.strongswan.android.ui.widget.TextInputLayoutHelper;
 

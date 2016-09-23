@@ -38,8 +38,8 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import org.strongswan.android.R;
-import org.strongswan.android.data.VpnProfile;
-import org.strongswan.android.data.VpnProfileDataSource;
+import org.strongswan.android.strongswanlib.data.VpnProfile;
+import org.strongswan.android.strongswanlib.data.VpnProfileDataSource;
 import org.strongswan.android.ui.adapter.VpnProfileAdapter;
 
 import java.util.ArrayList;
