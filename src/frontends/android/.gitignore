@@ -4,5 +4,8 @@ build/
 app/build/
 app/src/main/libs
 app/src/main/obj
+strongswanlib/build/
+strongswanlib/src/main/libs
+strongswanlib/src/main/obj
 *.iml
 local.properties

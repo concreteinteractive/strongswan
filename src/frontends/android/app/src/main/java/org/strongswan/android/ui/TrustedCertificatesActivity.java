@@ -31,10 +31,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import org.strongswan.android.R;
-import org.strongswan.android.data.VpnProfileDataSource;
-import org.strongswan.android.logic.TrustedCertificateManager;
-import org.strongswan.android.logic.TrustedCertificateManager.TrustedCertificateSource;
-import org.strongswan.android.security.TrustedCertificateEntry;
+import org.strongswan.android.strongswanlib.data.VpnProfileDataSource;
+import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager;
+import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager.TrustedCertificateSource;
+import security.TrustedCertificateEntry;
 import org.strongswan.android.ui.CertificateDeleteConfirmationDialog.OnCertificateDeleteListener;
 
 import java.security.KeyStore;

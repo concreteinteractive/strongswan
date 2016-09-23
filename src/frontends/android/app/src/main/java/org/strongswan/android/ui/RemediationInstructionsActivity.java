@@ -20,7 +20,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import org.strongswan.android.R;
-import org.strongswan.android.logic.imc.RemediationInstruction;
+import org.strongswan.android.strongswanlib.logic.imc.RemediationInstruction;
 import org.strongswan.android.ui.RemediationInstructionsFragment.OnRemediationInstructionSelectedListener;
 
 import java.util.ArrayList;

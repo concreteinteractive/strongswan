@@ -31,9 +31,9 @@ import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 
 import org.strongswan.android.R;
-import org.strongswan.android.logic.TrustedCertificateManager;
-import org.strongswan.android.logic.TrustedCertificateManager.TrustedCertificateSource;
-import org.strongswan.android.security.TrustedCertificateEntry;
+import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager;
+import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager.TrustedCertificateSource;
+import security.TrustedCertificateEntry;
 import org.strongswan.android.ui.adapter.TrustedCertificateAdapter;
 
 import java.security.cert.X509Certificate;

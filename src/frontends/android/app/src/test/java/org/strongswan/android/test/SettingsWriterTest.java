@@ -16,7 +16,7 @@
 package org.strongswan.android.test;
 
 import org.junit.Test;
-import org.strongswan.android.utils.SettingsWriter;
+import org.strongswan.android.strongswanlib.utils.SettingsWriter;
 
 import static org.junit.Assert.assertEquals;
 

@@ -24,8 +24,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import org.strongswan.android.R;
-import org.strongswan.android.data.LogContentProvider;
-import org.strongswan.android.logic.CharonVpnService;
+import org.strongswan.android.strongswanlib.data.LogContentProvider;
+import org.strongswan.android.strongswanlib.logic.CharonVpnService;
 
 import java.io.File;
 

@@ -16,7 +16,7 @@
 package org.strongswan.android.test;
 
 import org.junit.Test;
-import org.strongswan.android.utils.BufferedByteWriter;
+import org.strongswan.android.strongswanlib.utils.BufferedByteWriter;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;

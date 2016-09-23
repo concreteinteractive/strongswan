@@ -22,7 +22,7 @@ import android.view.View;
 import android.widget.ListView;
 
 import org.strongswan.android.R;
-import org.strongswan.android.logic.imc.RemediationInstruction;
+import org.strongswan.android.strongswanlib.logic.imc.RemediationInstruction;
 import org.strongswan.android.ui.adapter.RemediationInstructionAdapter;
 
 import java.util.ArrayList;

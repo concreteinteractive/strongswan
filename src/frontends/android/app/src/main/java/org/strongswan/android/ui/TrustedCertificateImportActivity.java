@@ -30,8 +30,8 @@ import android.support.v7.app.AppCompatDialogFragment;
 import android.widget.Toast;
 
 import org.strongswan.android.R;
-import org.strongswan.android.data.VpnProfileDataSource;
-import org.strongswan.android.logic.TrustedCertificateManager;
+import org.strongswan.android.strongswanlib.data.VpnProfileDataSource;
+import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
