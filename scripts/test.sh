@@ -96,9 +96,10 @@ osx)
 	export ACLOCAL_PATH=$BREW_PREFIX/opt/gettext/share/aclocal:$ACLOCAL_PATH
 	for pkg in openssl curl
 	do
-		PKG_CONFIG_PATH=$BREW_PREFIX/opt/$PKG/lib/pkgconfig:$PKG_CONFIG_PATH
+		PKG_CONFIG_PATH=$BREW_PREFIX/opt/$pkg/lib/pkgconfig:$PKG_CONFIG_PATH
 		CPPFLAGS="-I$BREW_PREFIX/opt/$pkg/include $CPPFLAGS"
 		LDFLAGS="-L$BREW_PREFIX/opt/$pkg/lib $LDFLAGS"
+		ls $BREW_PREFIX/opt/$pkg/lib
 	done
 	export PKG_CONFIG_PATH
 	export CPPFLAGS

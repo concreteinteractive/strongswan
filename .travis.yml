@@ -23,19 +23,19 @@ env:
     - LEAK_DETECTIVE=no
     - MONOLITHIC=no
   matrix:
-    - TEST=default
-    - TEST=default MONOLITHIC=yes
-    - TEST=default LEAK_DETECTIVE=yes
-    - TEST=openssl
-    - TEST=openssl LEAK_DETECTIVE=yes
-    - TEST=gcrypt
-    - TEST=gcrypt LEAK_DETECTIVE=yes
-    # we can't test Vstr as negative int args are not properly passed to CBs
-    - TEST=printf-builtin
-    - TEST=printf-builtin LEAK_DETECTIVE=yes
-    - TEST=all
-    - TEST=all MONOLITHIC=yes
-    - TEST=all LEAK_DETECTIVE=yes
+    #- TEST=default
+    #- TEST=default MONOLITHIC=yes
+    #- TEST=default LEAK_DETECTIVE=yes
+    #- TEST=openssl
+    #- TEST=openssl LEAK_DETECTIVE=yes
+    #- TEST=gcrypt
+    #- TEST=gcrypt LEAK_DETECTIVE=yes
+    ## we can't test Vstr as negative int args are not properly passed to CBs
+    #- TEST=printf-builtin
+    #- TEST=printf-builtin LEAK_DETECTIVE=yes
+    #- TEST=all
+    #- TEST=all MONOLITHIC=yes
+    #- TEST=all LEAK_DETECTIVE=yes
 
 matrix:
   include:
