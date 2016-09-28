@@ -60,7 +60,7 @@ import org.strongswan.android.strongswanlib.data.VpnProfileDataSource;
 import org.strongswan.android.strongswanlib.data.VpnType;
 import org.strongswan.android.strongswanlib.data.VpnType.VpnTypeFeature;
 import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager;
-import security.TrustedCertificateEntry;
+import org.strongswan.android.strongswanlib.security.TrustedCertificateEntry;
 import org.strongswan.android.ui.adapter.CertificateIdentitiesAdapter;
 import org.strongswan.android.ui.widget.TextInputLayoutHelper;
 

@@ -13,7 +13,7 @@
  * for more details.
  */
 
-package security;
+package org.strongswan.android.strongswanlib.security;
 
 import android.net.http.SslCertificate;
 

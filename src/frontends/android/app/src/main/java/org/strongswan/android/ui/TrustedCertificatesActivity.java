@@ -34,7 +34,7 @@ import org.strongswan.android.R;
 import org.strongswan.android.strongswanlib.data.VpnProfileDataSource;
 import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager;
 import org.strongswan.android.strongswanlib.logic.TrustedCertificateManager.TrustedCertificateSource;
-import security.TrustedCertificateEntry;
+import org.strongswan.android.strongswanlib.security.TrustedCertificateEntry;
 import org.strongswan.android.ui.CertificateDeleteConfirmationDialog.OnCertificateDeleteListener;
 
 import java.security.KeyStore;

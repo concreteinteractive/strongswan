@@ -17,7 +17,7 @@ package org.strongswan.android.ui;
 
 import java.security.Security;
 
-import security.LocalCertificateKeyStoreProvider;
+import org.strongswan.android.strongswanlib.security.LocalCertificateKeyStoreProvider;
 
 import android.app.Application;
 import android.content.Context;

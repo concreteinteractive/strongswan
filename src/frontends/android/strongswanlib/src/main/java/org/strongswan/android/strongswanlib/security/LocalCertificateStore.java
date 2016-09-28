@@ -13,7 +13,7 @@
  * for more details.
  */
 
-package security;
+package org.strongswan.android.strongswanlib.security;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -31,8 +31,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.regex.Pattern;
 
+import org.strongswan.android.strongswanlib.support.StrongSwanHolder;
 import org.strongswan.android.strongswanlib.utils.Utils;
-import org.strongswan.android.ui.StrongSwanApplication;
 
 import android.content.Context;
 
@@ -62,7 +62,7 @@ public class LocalCertificateStore
 		try
 		{
 			/* we replace any existing file with the same alias */
-			out = StrongSwanApplication.getContext().openFileOutput(FILE_PREFIX + keyid, Context.MODE_PRIVATE);
+			out = StrongSwanHolder.getContext().openFileOutput(FILE_PREFIX + keyid, Context.MODE_PRIVATE);
 			try
 			{
 				out.write(cert.getEncoded());
@@ -104,7 +104,7 @@ public class LocalCertificateStore
 		if (ALIAS_PATTERN.matcher(alias).matches())
 		{
 			alias = alias.substring(ALIAS_PREFIX.length());
-			StrongSwanApplication.getContext().deleteFile(FILE_PREFIX + alias);
+			StrongSwanHolder.getContext().deleteFile(FILE_PREFIX + alias);
 		}
 	}
 
@@ -122,7 +122,7 @@ public class LocalCertificateStore
 		alias = alias.substring(ALIAS_PREFIX.length());
 		try
 		{
-			FileInputStream in = StrongSwanApplication.getContext().openFileInput(FILE_PREFIX + alias);
+			FileInputStream in = StrongSwanHolder.getContext().openFileInput(FILE_PREFIX + alias);
 			try
 			{
 				CertificateFactory factory = CertificateFactory.getInstance("X.509");
@@ -164,7 +164,7 @@ public class LocalCertificateStore
 			return null;
 		}
 		alias = alias.substring(ALIAS_PREFIX.length());
-		File file = StrongSwanApplication.getContext().getFileStreamPath(FILE_PREFIX + alias);
+		File file = StrongSwanHolder.getContext().getFileStreamPath(FILE_PREFIX + alias);
 		return file.exists() ? new Date(file.lastModified()) : null;
 	}
 
@@ -175,7 +175,7 @@ public class LocalCertificateStore
 	public ArrayList<String> aliases()
 	{
 		ArrayList<String> list = new ArrayList<String>();
-		for (String file : StrongSwanApplication.getContext().fileList())
+		for (String file : StrongSwanHolder.getContext().fileList())
 		{
 			if (file.startsWith(FILE_PREFIX))
 			{

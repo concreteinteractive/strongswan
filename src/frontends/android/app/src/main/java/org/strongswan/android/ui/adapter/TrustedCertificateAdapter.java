@@ -18,7 +18,7 @@ package org.strongswan.android.ui.adapter;
 import java.util.List;
 
 import org.strongswan.android.R;
-import security.TrustedCertificateEntry;
+import org.strongswan.android.strongswanlib.security.TrustedCertificateEntry;
 
 import android.content.Context;
 import android.view.LayoutInflater;
