@@ -37,6 +37,7 @@ import org.strongswan.android.strongswanlib.logic.VpnStateService.ErrorState;
 import org.strongswan.android.strongswanlib.logic.VpnStateService.State;
 import org.strongswan.android.strongswanlib.logic.imc.ImcState;
 import org.strongswan.android.strongswanlib.logic.imc.RemediationInstruction;
+import org.strongswan.android.strongswanlib.support.StrongSwanHolder;
 import org.strongswan.android.strongswanlib.utils.SettingsWriter;
 
 import android.annotation.TargetApi;
@@ -562,11 +563,7 @@ public class CharonVpnService extends VpnService implements Runnable
 			VpnService.Builder builder = new CharonVpnService.Builder();
 			builder.setSession(mName);
 
-			Class configurationActivityClass = CharonVpnService.getConfigurationActivityClass();
-			if (configurationActivityClass == null) {
-				throw new NullPointerException("Configuration activity Class is null");
-			}
-
+			Class configurationActivityClass = StrongSwanHolder.getConfigurationActivityClass();
 			/* even though the option displayed in the system dialog says "Configure"
 			 * we just use our main Activity */
 			Context context = getApplicationContext();
@@ -839,20 +836,7 @@ public class CharonVpnService extends VpnService implements Runnable
 		}
 	}
 
-	private static Class<?> ConfigurationActivityClass;
-	private static final Object ConfigurationActivityClassLock = new Object();
 
-	public static void setConfigurationActivityClass(Class<?> configurationActivityClass) {
-		synchronized (ConfigurationActivityClassLock) {
-			ConfigurationActivityClass = configurationActivityClass;
-		}
-	}
-
-	public static Class<?> getConfigurationActivityClass() {
-		synchronized (ConfigurationActivityClassLock) {
-			return ConfigurationActivityClass;
-		}
-	}
 
 	/*
 	 * The libraries are extracted to /data/data/org.strongswan.android/...

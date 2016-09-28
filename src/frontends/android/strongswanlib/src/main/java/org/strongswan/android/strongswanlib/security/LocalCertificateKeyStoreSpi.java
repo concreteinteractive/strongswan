@@ -13,7 +13,7 @@
  * for more details.
  */
 
-package security;
+package org.strongswan.android.strongswanlib.security;
 
 import java.io.IOException;
 import java.io.InputStream;

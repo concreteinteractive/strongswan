@@ -19,7 +19,7 @@ import android.content.Context;
 import android.widget.ArrayAdapter;
 
 import org.strongswan.android.R;
-import security.TrustedCertificateEntry;
+import org.strongswan.android.strongswanlib.security.TrustedCertificateEntry;
 
 public class CertificateIdentitiesAdapter extends ArrayAdapter<String>
 {
