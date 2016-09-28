@@ -6,36 +6,36 @@ import android.content.ContextWrapper;
 
 public class StrongSwanHolder {
 
-    private static Class<?> configurationActivityClass;
-    private static final Object configurationActivityClassLock = new Object();
+    private static Class<?> mConfigurationActivityClass;
+    private static final Object mConfigurationActivityClassLock = new Object();
 
     public static void setConfigurationActivityClass(Class<?> configurationActivityClass) {
-        synchronized (configurationActivityClassLock) {
-            configurationActivityClass = configurationActivityClass;
+        synchronized (mConfigurationActivityClassLock) {
+            mConfigurationActivityClass = configurationActivityClass;
         }
     }
 
     public static Class<?> getConfigurationActivityClass() {
-        synchronized (configurationActivityClassLock) {
-            if (configurationActivityClass == null) {
+        synchronized (mConfigurationActivityClassLock) {
+            if (mConfigurationActivityClass == null) {
                 throw new NullPointerException("configurationActivityClass == null - StrongSwanHolder not configured");
             }
-            return configurationActivityClass;
+            return mConfigurationActivityClass;
         }
     }
 
-    private static Application mainApplication;
-    private static final Object mainApplicationLock = new Object();
+    private static Application mMainApplication;
+    private static final Object mMainApplicationLock = new Object();
 
     public static void setMainApplication(Application mainApplication) {
-        synchronized (mainApplicationLock) {
-            StrongSwanHolder.mainApplication = mainApplication;
+        synchronized (mMainApplicationLock) {
+            mMainApplication = mainApplication;
         }
     }
 
     public static Application getMainApplication() {
-        synchronized (mainApplicationLock) {
-            return mainApplication;
+        synchronized (mMainApplicationLock) {
+            return mMainApplication;
         }
     }
 
